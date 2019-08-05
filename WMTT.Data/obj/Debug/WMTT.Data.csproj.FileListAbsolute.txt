@@ -1,0 +1,14 @@
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\WMTT.Data.dll.config
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\WMTT.Data.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\WMTT.Data.pdb
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\EntityFramework.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\WMTT.Common.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\WMTT.Common.pdb
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\EntityFramework.xml
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\obj\Debug\WMTT.Data.csprojAssemblyReference.cache
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\obj\Debug\WMTT.Data.csproj.CoreCompileInputs.cache
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\obj\Debug\WMTT.Data.csproj.CopyComplete
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\obj\Debug\WMTT.Data.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data\obj\Debug\WMTT.Data.pdb

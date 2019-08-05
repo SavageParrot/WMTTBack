@@ -1,0 +1,17 @@
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.Implementations.dll.config
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.Implementations.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.Implementations.pdb
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\EntityFramework.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Common.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Common.pdb
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.pdb
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\WMTT.Data.dll.config
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\EntityFramework.xml
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\obj\Debug\WMTT.Data.Implementations.csprojAssemblyReference.cache
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\obj\Debug\WMTT.Data.Implementations.csproj.CoreCompileInputs.cache
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\obj\Debug\WMTT.Data.Implementations.csproj.CopyComplete
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\obj\Debug\WMTT.Data.Implementations.dll
+C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Data.Implementations\obj\Debug\WMTT.Data.Implementations.pdb

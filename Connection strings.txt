@@ -1,0 +1,12 @@
+Conection strings sebastian
+
+<connectionStrings>
+   <add name="TTDBEntities" connectionString="metadata=res://*/WMTTEntity.csdl|res://*/WMTTEntity.ssdl|res://*/WMTTEntity.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EXCOBOGLAP032\MSSQLSERVER2;initial catalog=TTDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+</connectionStrings>
+
+
+Conection strings daniel
+
+<connectionStrings>
+   <add name="TTDBEntities" connectionString="metadata=res://*/WMTTEntity.csdl|res://*/WMTTEntity.ssdl|res://*/WMTTEntity.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EXCOBOGLAP046;initial catalog=TTDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+</connectionStrings>
