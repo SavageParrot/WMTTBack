@@ -11,16 +11,16 @@ using WMTT.Data.Interfaces;
 
 namespace WMTT.Biz.Implementations
 {
-    public class PersonBiz : IPersonBiz
+    public class ArtistBiz : IArtistBiz
     {
-        private readonly IPersonData actionPerson = new PersonData();
+        private readonly IArtistData actionPerson = new ArtistData();
 
-        public Response<Person> GetAll()
+        public Response<Artist> GetAll()
         {
             return actionPerson.GetAll();
         }
 
-        public Response<Person> Get(int idElement)
+        public Response<Artist> Get(int idElement)
         {
             return actionPerson.Get(idElement);
         }

@@ -10,19 +10,19 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Get()
         {
-            PersonCategoryData getPerson = new PersonCategoryData();
+            ArtistCategoryData getPerson = new ArtistCategoryData();
             Assert.AreEqual(null, getPerson.Get(5, 1).errorMessage);
         }
 
         [TestMethod]
         public void Post()
         {
-            PersonCategoryData postPerson = new PersonCategoryData();
-            Persons_Categories newPerson = new Persons_Categories()
+            ArtistCategoryData postPerson = new ArtistCategoryData();
+            Artists_Categories newPerson = new Artists_Categories()
             {
                 IdCategory = 2,
-                Idperson = 6,
-                Obsevation = "Observación de la categoría"
+                IdArtist = 6,
+                Observation = "Observación de la categoría"
             };
             Assert.AreEqual(true, postPerson.Post(newPerson).succeed);
         }
@@ -30,12 +30,12 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Update()
         {
-            PersonCategoryData updatePerson = new PersonCategoryData();
-            Persons_Categories newPerson = new Persons_Categories()
+            ArtistCategoryData updatePerson = new ArtistCategoryData();
+            Artists_Categories newPerson = new Artists_Categories()
             {
                 IdCategory = 1,
-                Idperson = 5,
-                Obsevation = "Observación de la categoría actualizada"
+                IdArtist = 5,
+                Observation = "Observación de la categoría actualizada"
             };
             Assert.AreEqual(true, updatePerson.Update(newPerson).succeed);
         }
@@ -43,21 +43,21 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Delete()
         {
-            PersonCategoryData delCategory = new PersonCategoryData();
+            ArtistCategoryData delCategory = new ArtistCategoryData();
             Assert.AreEqual(true, delCategory.Delete(5, 1).succeed);
         }
 
         [TestMethod]
         public void GetCatPerPerson()
         {
-            PersonCategoryData getCategories = new PersonCategoryData();
+            ArtistCategoryData getCategories = new ArtistCategoryData();
             Assert.AreEqual(true, getCategories.GetCatPerPerson(5).succeed);
         }
 
         [TestMethod]
         public void GetPersonPerCat()
         {
-            PersonCategoryData getPeople = new PersonCategoryData();
+            ArtistCategoryData getPeople = new ArtistCategoryData();
             Assert.AreEqual(true, getPeople.GetPersonPerCat(1).succeed);
         }
     }

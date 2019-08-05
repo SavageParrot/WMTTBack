@@ -14,16 +14,16 @@ namespace WMTT.Service.Controllers
     public class PersonController : ApiController
     {
 
-        private readonly IPersonBiz person = new PersonBiz();
+        private readonly IArtistBiz person = new ArtistBiz();
 
         // GET: api/Person
-        public Response<Person> Get()
+        public Response<Artist> Get()
         {
             return person.GetAll();
         }
 
         // GET: api/Person/5
-        public Response<Person> Get(int id)
+        public Response<Artist> Get(int id)
         {
             return person.Get(id);
         }

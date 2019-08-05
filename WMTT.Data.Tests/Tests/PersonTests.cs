@@ -11,7 +11,7 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Delete()
         {
-            PersonData delPerson = new PersonData();
+            ArtistData delPerson = new ArtistData();
             Assert.AreEqual(true, delPerson.Delete(7).succeed);
 
         }
@@ -19,15 +19,15 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Get()
         {
-            PersonData getPerson = new PersonData();
+            ArtistData getPerson = new ArtistData();
             Assert.AreEqual(null, getPerson.Get(2).errorMessage);
         }
 
         [TestMethod]
         public void Post()
         {
-            PersonData postPerson = new PersonData();
-            Person newPerson = new Person()
+            ArtistData postPerson = new ArtistData();
+            Artist newPerson = new Artist()
             {
                 FullName = "Juan Castelblanco",
                 BirthDate = Convert.ToDateTime("1991-06-11"),
@@ -42,10 +42,10 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void Update()
         {
-            PersonData updatePerson = new PersonData();
-            Person newPerson = new Person()
+            ArtistData updatePerson = new ArtistData();
+            Artist newPerson = new Artist()
             {
-                IdPerson = 5,
+                IdArtist = 5,
                 FullName = "Juan"
             };
             Assert.AreEqual(true, updatePerson.Update(newPerson).succeed);
@@ -54,7 +54,7 @@ namespace WMTT.Data.Tests.Tests
         [TestMethod]
         public void GetAll()
         {
-            PersonData getAllPeople = new PersonData();
+            ArtistData getAllPeople = new ArtistData();
             Assert.AreEqual(5, getAllPeople.GetAll().list.Count());
         }
     }

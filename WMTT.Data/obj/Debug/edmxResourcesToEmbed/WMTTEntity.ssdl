@@ -1,5 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TTDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Artists">
+    <Key>
+      <PropertyRef Name="IdArtist" />
+    </Key>
+    <Property Name="IdArtist" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Address" Type="nchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Artists_Categories">
+    <Key>
+      <PropertyRef Name="IdArtist" />
+      <PropertyRef Name="IdCategory" />
+    </Key>
+    <Property Name="IdArtist" Type="int" Nullable="false" />
+    <Property Name="IdCategory" Type="int" Nullable="false" />
+    <Property Name="Observation" Type="text" />
+  </EntityType>
   <EntityType Name="Categories">
     <Key>
       <PropertyRef Name="IdCategory" />
@@ -8,62 +29,41 @@
     <Property Name="CategoryName" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="Details" Type="text" Nullable="false" />
   </EntityType>
-  <EntityType Name="Persons">
-    <Key>
-      <PropertyRef Name="IdPerson" />
-    </Key>
-    <Property Name="IdPerson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FullName" Type="varchar" MaxLength="40" Nullable="false" />
-    <Property Name="BirthDate" Type="date" Nullable="false" />
-    <Property Name="StartDate" Type="date" Nullable="false" />
-    <Property Name="Email" Type="nchar" MaxLength="30" Nullable="false" />
-    <Property Name="PhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="Address" Type="nchar" MaxLength="40" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Persons_Categories">
-    <Key>
-      <PropertyRef Name="Idperson" />
-      <PropertyRef Name="IdCategory" />
-    </Key>
-    <Property Name="Idperson" Type="int" Nullable="false" />
-    <Property Name="IdCategory" Type="int" Nullable="false" />
-    <Property Name="Obsevation" Type="text" />
-  </EntityType>
   <Association Name="FK__Person_Ca__IdCat__3B75D760">
     <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
-    <End Role="Persons_Categories" Type="Self.Persons_Categories" Multiplicity="*" />
+    <End Role="Artists_Categories" Type="Self.Artists_Categories" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="IdCategory" />
       </Principal>
-      <Dependent Role="Persons_Categories">
+      <Dependent Role="Artists_Categories">
         <PropertyRef Name="IdCategory" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Person_Ca__IdPer__3A81B327">
-    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
-    <End Role="Persons_Categories" Type="Self.Persons_Categories" Multiplicity="*" />
+    <End Role="Artists" Type="Self.Artists" Multiplicity="1" />
+    <End Role="Artists_Categories" Type="Self.Artists_Categories" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Persons">
-        <PropertyRef Name="IdPerson" />
+      <Principal Role="Artists">
+        <PropertyRef Name="IdArtist" />
       </Principal>
-      <Dependent Role="Persons_Categories">
-        <PropertyRef Name="Idperson" />
+      <Dependent Role="Artists_Categories">
+        <PropertyRef Name="IdArtist" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="TTDBModelStoreContainer">
+    <EntitySet Name="Artists" EntityType="Self.Artists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Artists_Categories" EntityType="Self.Artists_Categories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Persons_Categories" EntityType="Self.Persons_Categories" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Person_Ca__IdCat__3B75D760" Association="Self.FK__Person_Ca__IdCat__3B75D760">
       <End Role="Categories" EntitySet="Categories" />
-      <End Role="Persons_Categories" EntitySet="Persons_Categories" />
+      <End Role="Artists_Categories" EntitySet="Artists_Categories" />
     </AssociationSet>
     <AssociationSet Name="FK__Person_Ca__IdPer__3A81B327" Association="Self.FK__Person_Ca__IdPer__3A81B327">
-      <End Role="Persons" EntitySet="Persons" />
-      <End Role="Persons_Categories" EntitySet="Persons_Categories" />
+      <End Role="Artists" EntitySet="Artists" />
+      <End Role="Artists_Categories" EntitySet="Artists_Categories" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

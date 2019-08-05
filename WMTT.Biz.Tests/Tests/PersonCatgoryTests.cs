@@ -11,14 +11,14 @@ namespace WMTT.Biz.Tests.Tests
         [TestMethod]
         public void GetCatPerPerson()
         {
-            PersonCategoryBiz getCategories = new PersonCategoryBiz();
+            ArtistCategoryBiz getCategories = new ArtistCategoryBiz();
             Assert.AreEqual(2, getCategories.GetCatPerPerson(6).list.Count());
         }
 
         [TestMethod]
         public void GetPersonPerCat()
         {
-            PersonCategoryBiz getPeople = new PersonCategoryBiz();
+            ArtistCategoryBiz getPeople = new ArtistCategoryBiz();
             Assert.AreEqual(2, getPeople.GetPersonPerCat(2).list.Count());
         }
     }

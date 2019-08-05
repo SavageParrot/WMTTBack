@@ -8,9 +8,9 @@ using WMTT.Data;
 
 namespace WMTT.Biz.Interfaces
 {
-    public interface IPersonCategoryBiz
+    public interface IArtistBiz
     {
-        Response<Persons_Categories> GetCatPerPerson(int idPerson);
-        Response<Persons_Categories> GetPersonPerCat(int idCategory);
+        Response<Artist> GetAll();
+        Response<Artist> Get(int idElement);
     }
 }

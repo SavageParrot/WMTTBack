@@ -43,11 +43,11 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Implementations\CategoryBiz.cs" />
-    <Compile Include="Implementations\PersonBiz.cs" />
-    <Compile Include="Implementations\PersonCategoryBiz.cs" />
+    <Compile Include="Implementations\ArtistBiz.cs" />
+    <Compile Include="Implementations\ArtistCategoryBiz.cs" />
     <Compile Include="Interfaces\ICategoryBiz.cs" />
-    <Compile Include="Interfaces\IPersonBiz.cs" />
-    <Compile Include="Interfaces\IPersonCategoryBiz.cs" />
+    <Compile Include="Interfaces\IArtistBiz.cs" />
+    <Compile Include="Interfaces\IArtistCategoryBiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

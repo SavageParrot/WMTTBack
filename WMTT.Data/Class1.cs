@@ -13,7 +13,7 @@ namespace WMTT.Data
         {
             using (TTDBEntities db = new TTDBEntities())
             {
-                DbSet<Person> list = db.Persons;
+                DbSet<Artist> list = db.Artists;
                 return list.Count();
             }
         }

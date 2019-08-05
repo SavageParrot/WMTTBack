@@ -13,12 +13,12 @@ namespace WMTT.Service.Controllers
 {
     public class PersonCategoryController : ApiController
     {
-        private readonly IPersonCategoryBiz personCategory = new PersonCategoryBiz();
+        private readonly IArtistCategoryBiz personCategory = new ArtistCategoryBiz();
 
         // GET: 
         [Route("api/Person_Category/getPeople/{id}")]
         [HttpGet]
-        public Response<Persons_Categories> GetPeople(int id)
+        public Response<Artists_Categories> GetPeople(int id)
         {
             return personCategory.GetPersonPerCat(id);
         }
@@ -26,7 +26,7 @@ namespace WMTT.Service.Controllers
         // GET: 
         [Route("api/Person_Category/getCategories/{id}")]
         [HttpGet]
-        public Response<Persons_Categories> Get(int id)
+        public Response<Artists_Categories> Get(int id)
         {
             return personCategory.GetCatPerPerson(id);
         }

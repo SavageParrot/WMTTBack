@@ -11,15 +11,15 @@ using WMTT.Data.Interfaces;
 
 namespace WMTT.Biz.Implementations
 {
-    public class PersonCategoryBiz : IPersonCategoryBiz
+    public class ArtistCategoryBiz : IArtistCategoryBiz
     {
-        private readonly IPersonCategoryData actionPerCat = new PersonCategoryData();
-        public Response<Persons_Categories> GetCatPerPerson(int idPerson)
+        private readonly IArtistCategoryData actionPerCat = new ArtistCategoryData();
+        public Response<Artists_Categories> GetCatPerPerson(int idPerson)
         {
             return actionPerCat.GetCatPerPerson(idPerson);
         }
 
-        public Response<Persons_Categories> GetPersonPerCat(int idCategory)
+        public Response<Artists_Categories> GetPersonPerCat(int idCategory)
         {
             return actionPerCat.GetPersonPerCat(idCategory);
         }

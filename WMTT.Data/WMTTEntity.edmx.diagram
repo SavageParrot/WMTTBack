@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="24fdf7324b044a90b4e146fdbf604cdf" Name="Diagram1">
-        <EntityTypeShape EntityType="TTDBModel.Category" Width="1.5" PointX="0.75" PointY="1" />
-        <EntityTypeShape EntityType="TTDBModel.Person" Width="1.5" PointX="0.75" PointY="5.25" />
-        <EntityTypeShape EntityType="TTDBModel.Persons_Categories" Width="1.5" PointX="3" PointY="0.875" />
-        <AssociationConnector Association="TTDBModel.FK__Person_Ca__IdCat__3B75D760" />
+        <EntityTypeShape EntityType="TTDBModel.Artist" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="TTDBModel.Artists_Categories" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="TTDBModel.Category" Width="1.5" PointX="0.75" PointY="5.375" />
         <AssociationConnector Association="TTDBModel.FK__Person_Ca__IdPer__3A81B327" />
+        <AssociationConnector Association="TTDBModel.FK__Person_Ca__IdCat__3B75D760" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

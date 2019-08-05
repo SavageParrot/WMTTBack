@@ -8,69 +8,69 @@ using WMTT.Data.Interfaces;
 
 namespace WMTT.Data.Implementations.Classes
 {
-    public class PersonData : IPersonData
+    public class ArtistData : IArtistData
     {
-        public Response<Person> Delete(int idElement1, int idElement2 = 0)
+        public Response<Artist> Delete(int idElement1, int idElement2 = 0)
         {
             try
             {
-                Person delPerson;
+                Artist delPerson;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    delPerson = db.Persons.Find(idElement1);
-                    db.Persons.Remove(delPerson);
+                    delPerson = db.Artists.Find(idElement1);
+                    db.Artists.Remove(delPerson);
                     db.SaveChanges();
                 }
-                return new Response<Person>(null, delPerson.IdPerson, true, null);
+                return new Response<Artist>(null, delPerson.IdArtist, true, null);
             }
             catch (Exception err)
             {
-                return new Response<Person>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
 
-        public Response<Person> Get(int idElement1, int idElement2 = 0)
+        public Response<Artist> Get(int idElement1, int idElement2 = 0)
         {
             try
             {
-                Person getPerson;
+                Artist getPerson;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    getPerson = db.Persons.Find(idElement1);
+                    getPerson = db.Artists.Find(idElement1);
                 }
-                return new Response<Person>(null, getPerson.IdPerson, true, getPerson);
+                return new Response<Artist>(null, getPerson.IdArtist, true, getPerson);
             }
             catch (Exception err)
             {
-                return new Response<Person>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
 
-        public Response<Person> Post(Person element)
+        public Response<Artist> Post(Artist element)
         {
             try
             {
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    db.Persons.Add(element);
+                    db.Artists.Add(element);
                     db.SaveChanges();
                 }
-                return new Response<Person>(null, element.IdPerson, true, null);
+                return new Response<Artist>(null, element.IdArtist, true, null);
             }
             catch (Exception err)
             {
-                return new Response<Person>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
 
-        public Response<Person> Update(Person element)
+        public Response<Artist> Update(Artist element)
         {
             try
             {
-                Person updatePerson;
+                Artist updatePerson;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    updatePerson = db.Persons.Find(element.IdPerson);
+                    updatePerson = db.Artists.Find(element.IdArtist);
                     if (element.FullName != null)
                     {
                         updatePerson.FullName = element.FullName;
@@ -98,28 +98,28 @@ namespace WMTT.Data.Implementations.Classes
                     db.Entry(updatePerson);
                     db.SaveChanges();
                 }
-                return new Response<Person>(null, updatePerson.IdPerson, true, null);
+                return new Response<Artist>(null, updatePerson.IdArtist, true, null);
             }
             catch (Exception err)
             {
-                return new Response<Person>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
 
-        public Response<Person> GetAll()
+        public Response<Artist> GetAll()
         {
             try
             {
-                IEnumerable<Person> allPeople;
+                IEnumerable<Artist> allPeople;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    allPeople = db.Persons.ToList();
+                    allPeople = db.Artists.ToList();
                 }
-                return new Response<Person>(null, null, true, null, allPeople);
+                return new Response<Artist>(null, null, true, null, allPeople);
             }
             catch (Exception err)
             {
-                return new Response<Person>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
     }

@@ -25,8 +25,8 @@ namespace WMTT.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Artist> Artists { get; set; }
+        public virtual DbSet<Artists_Categories> Artists_Categories { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Person> Persons { get; set; }
-        public virtual DbSet<Persons_Categories> Persons_Categories { get; set; }
     }
 }

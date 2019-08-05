@@ -13,14 +13,14 @@ namespace WMTT.Biz.Tests.Tests
         [TestMethod]
         public void GetAll()
         {
-            PersonBiz person = new PersonBiz();
+            ArtistBiz person = new ArtistBiz();
             Assert.AreEqual(5, person.GetAll().list.Count());
         }
 
         [TestMethod]
         public void Get()
         {
-            PersonBiz person = new PersonBiz();
+            ArtistBiz person = new ArtistBiz();
             Assert.AreEqual(true, person.Get(2).succeed);
         }
     }

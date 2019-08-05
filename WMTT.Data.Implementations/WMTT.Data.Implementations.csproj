@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\CategoryData.cs" />
-    <Compile Include="Classes\PersonData.cs" />
-    <Compile Include="Classes\PersonCategoryData.cs" />
+    <Compile Include="Classes\ArtistData.cs" />
+    <Compile Include="Classes\ArtistCategoryData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,16 +14,16 @@ namespace WMTT.Data
     using System.Runtime.Serialization;
 
     [DataContract]
-    public partial class Persons_Categories
+    public partial class Artists_Categories
     {
         [DataMember]
-        public int Idperson { get; set; }
+        public int IdArtist { get; set; }
         [DataMember]
         public int IdCategory { get; set; }
         [DataMember]
-        public string Obsevation { get; set; }
+        public string Observation { get; set; }
     
+        public virtual Artist Artist { get; set; }
         public virtual Category Category { get; set; }
-        public virtual Person Person { get; set; }
     }
 }

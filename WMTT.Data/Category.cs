@@ -19,9 +19,9 @@ namespace WMTT.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            this.Persons_Categories = new HashSet<Persons_Categories>();
+            this.Artists_Categories = new HashSet<Artists_Categories>();
         }
-    
+
         [DataMember]
         public int IdCategory { get; set; }
         [DataMember]
@@ -30,6 +30,6 @@ namespace WMTT.Data
         public string Details { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Persons_Categories> Persons_Categories { get; set; }
+        public virtual ICollection<Artists_Categories> Artists_Categories { get; set; }
     }
 }

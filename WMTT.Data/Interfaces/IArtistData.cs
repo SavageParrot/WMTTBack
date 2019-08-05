@@ -7,8 +7,8 @@ using WMTT.Common;
 
 namespace WMTT.Data.Interfaces
 {
-    public interface IPersonData : IGenericData<Person>
+    public interface IArtistData : IGenericData<Artist>
     {
-        Response<Person> GetAll();
+        Response<Artist> GetAll();
     }
 }

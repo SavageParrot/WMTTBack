@@ -14,16 +14,16 @@ namespace WMTT.Data
     using System.Runtime.Serialization;
 
     [DataContract]
-    public partial class Person
+    public partial class Artist
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Person()
+        public Artist()
         {
-            this.Persons_Categories = new HashSet<Persons_Categories>();
+            this.Artists_Categories = new HashSet<Artists_Categories>();
         }
-
+    
         [DataMember]
-        public int IdPerson { get; set; }
+        public int IdArtist { get; set; }
         [DataMember]
         public string FullName { get; set; }
         [DataMember]
@@ -38,6 +38,6 @@ namespace WMTT.Data
         public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Persons_Categories> Persons_Categories { get; set; }
+        public virtual ICollection<Artists_Categories> Artists_Categories { get; set; }
     }
 }
