@@ -74,6 +74,10 @@
       <Project>{9276225D-0797-44DC-BEA6-A4746B6AB361}</Project>
       <Name>WMTT.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WMTT.Data.Implementations\WMTT.Data.Implementations.csproj">
+      <Project>{760071BC-1E3C-4686-B5F5-FD5423F4CB38}</Project>
+      <Name>WMTT.Data.Implementations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WMTT.Data\WMTT.Data.csproj">
       <Project>{8B50F921-03FF-4135-AE1A-9E52CBBE247C}</Project>
       <Name>WMTT.Data</Name>

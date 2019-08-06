@@ -4,6 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WMTT.Biz.Implementations;
 using WMTT.Common;
 using WMTT.Data;
+using WMTT.Data.Implementations.Classes;
+using WMTT.Data.Interfaces;
 
 namespace WMTT.Biz.Tests.Tests
 {
@@ -13,14 +15,16 @@ namespace WMTT.Biz.Tests.Tests
         [TestMethod]
         public void GetAll()
         {
-            ArtistBiz person = new ArtistBiz();
+            IArtistData _artist = new ArtistData();
+            ArtistBiz person = new ArtistBiz(_artist);
             Assert.AreEqual(5, person.GetAll().list.Count());
         }
 
         [TestMethod]
         public void Get()
         {
-            ArtistBiz person = new ArtistBiz();
+            IArtistData _artist = new ArtistData();
+            ArtistBiz person = new ArtistBiz(_artist);
             Assert.AreEqual(true, person.Get(2).succeed);
         }
     }
