@@ -11,37 +11,42 @@ using WMTT.Data;
 
 namespace WMTT.Service.Controllers
 {
-    public class PersonCategoryController : ApiController
+    public class ArtistCategoryController : ApiController
     {
-        private readonly IArtistCategoryBiz personCategory = new ArtistCategoryBiz();
+        private readonly IArtistCategoryBiz _artistCategory;
+
+        public ArtistCategoryController(IArtistCategoryBiz artistCategory)
+        {
+            _artistCategory = artistCategory;
+        }
 
         // GET: 
-        [Route("api/Person_Category/getPeople/{id}")]
+        [Route("api/ArtistCategory/getPeople/{id}")]
         [HttpGet]
         public Response<Artists_Categories> GetPeople(int id)
         {
-            return personCategory.GetPersonPerCat(id);
+            return _artistCategory.GetPersonPerCat(id);
         }
 
         // GET: 
-        [Route("api/Person_Category/getCategories/{id}")]
+        [Route("api/ArtistCategory/getCategories/{id}")]
         [HttpGet]
         public Response<Artists_Categories> Get(int id)
         {
-            return personCategory.GetCatPerPerson(id);
+            return _artistCategory.GetCatPerPerson(id);
         }
 
-        // POST: api/PersonCategory
+        // POST: api/ArtistCategory
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/PersonCategory/5
+        // PUT: api/ArtistCategory/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/PersonCategory/5
+        // DELETE: api/ArtistCategory/5
         public void Delete(int id)
         {
         }

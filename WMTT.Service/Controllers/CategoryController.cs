@@ -14,12 +14,17 @@ namespace WMTT.Service.Controllers
     public class CategoryController : ApiController
     {
 
-        private readonly ICategoryBiz category = new CategoryBiz();
+        private readonly ICategoryBiz _category;
+
+        public CategoryController(ICategoryBiz category)
+        {
+            _category = category;
+        }
 
         // GET: api/Category
         public Response<Category> Get()
         {
-            return category.GetAll();
+            return _category.GetAll();
         }
 
         // GET: api/CategoryController/5

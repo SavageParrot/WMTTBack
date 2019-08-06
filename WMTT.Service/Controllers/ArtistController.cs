@@ -11,34 +11,39 @@ using WMTT.Data;
 
 namespace WMTT.Service.Controllers
 {
-    public class PersonController : ApiController
+    public class ArtistController : ApiController
     {
 
-        private readonly IArtistBiz person = new ArtistBiz();
+        private readonly IArtistBiz _artist ;
 
-        // GET: api/Person
+        public ArtistController(IArtistBiz artist)
+        {
+            _artist = artist;
+        }
+
+        // GET: api/Artist
         public Response<Artist> Get()
         {
-            return person.GetAll();
+            return _artist.GetAll();
         }
 
-        // GET: api/Person/5
+        // GET: api/Artist/5
         public Response<Artist> Get(int id)
         {
-            return person.Get(id);
+            return _artist.Get(id);
         }
 
-        // POST: api/Person
+        // POST: api/Artist
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/Person/5
+        // PUT: api/Artist/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/Person/5
+        // DELETE: api/Artist/5
         public void Delete(int id)
         {
         }

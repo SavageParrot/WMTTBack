@@ -13,16 +13,21 @@ namespace WMTT.Biz.Implementations
 {
     public class ArtistBiz : IArtistBiz
     {
-        private readonly IArtistData actionPerson = new ArtistData();
+        private readonly IArtistData _actionPerson;
+
+        public ArtistBiz(IArtistData actionPerson)
+        {
+            _actionPerson = actionPerson;
+        }
 
         public Response<Artist> GetAll()
         {
-            return actionPerson.GetAll();
+            return _actionPerson.GetAll();
         }
 
         public Response<Artist> Get(int idElement)
         {
-            return actionPerson.Get(idElement);
+            return _actionPerson.Get(idElement);
         }
     }
 }

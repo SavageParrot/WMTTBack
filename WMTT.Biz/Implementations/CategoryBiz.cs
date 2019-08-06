@@ -13,10 +13,16 @@ namespace WMTT.Biz.Implementations
 {
     public class CategoryBiz : ICategoryBiz
     {
-        private readonly ICategoryData actionCategory = new CategoryData();
+        private readonly ICategoryData _actionCategory;
+
+        public CategoryBiz(ICategoryData actionCategory)
+        {
+            _actionCategory = actionCategory;
+        }
+
         public Response<Category> GetAll()
         {
-            return actionCategory.GetAll();
+            return _actionCategory.GetAll();
         }
     }
 }

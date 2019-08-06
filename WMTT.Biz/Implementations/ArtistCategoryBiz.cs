@@ -13,15 +13,21 @@ namespace WMTT.Biz.Implementations
 {
     public class ArtistCategoryBiz : IArtistCategoryBiz
     {
-        private readonly IArtistCategoryData actionPerCat = new ArtistCategoryData();
+        private readonly IArtistCategoryData _actionPerCat;
+
+        public ArtistCategoryBiz(IArtistCategoryData actionPerCat)
+        {
+            _actionPerCat = actionPerCat;
+        }
+
         public Response<Artists_Categories> GetCatPerPerson(int idPerson)
         {
-            return actionPerCat.GetCatPerPerson(idPerson);
+            return _actionPerCat.GetCatPerPerson(idPerson);
         }
 
         public Response<Artists_Categories> GetPersonPerCat(int idCategory)
         {
-            return actionPerCat.GetPersonPerCat(idCategory);
+            return _actionPerCat.GetPersonPerCat(idCategory);
         }
     }
 }
