@@ -5,7 +5,7 @@ C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT
 C:\Users\juan.castelblanco\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.pdb
 C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\bin\Debug\WMTT.Common.dll
 C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\bin\Debug\WMTT.Common.pdb
-C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.csprojAssemblyReference.cache
 C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.csproj.CoreCompileInputs.cache
 C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.dll
 C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.pdb
+C:\Users\daniel.lara\source\repos\WeMakeTattoos\WMTT.Common\obj\Debug\WMTT.Common.csprojAssemblyReference.cache

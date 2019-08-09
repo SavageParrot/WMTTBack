@@ -20,12 +20,12 @@ namespace WMTT.Biz.Implementations
             _actionPerCat = actionPerCat;
         }
 
-        public Response<Artists_Categories> GetCatPerPerson(int idPerson)
+        public Response<Category> GetCatPerPerson(int idPerson)
         {
             return _actionPerCat.GetCatPerPerson(idPerson);
         }
 
-        public Response<Artists_Categories> GetPersonPerCat(int idCategory)
+        public Response<Artist> GetPersonPerCat(int idCategory)
         {
             return _actionPerCat.GetPersonPerCat(idCategory);
         }

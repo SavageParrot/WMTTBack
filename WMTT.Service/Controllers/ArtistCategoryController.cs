@@ -21,9 +21,9 @@ namespace WMTT.Service.Controllers
         }
 
         // GET: 
-        [Route("api/ArtistCategory/getPeople/{id}")]
+        [Route("api/ArtistCategory/getArtists/{id}")]
         [HttpGet]
-        public Response<Artists_Categories> GetPeople(int id)
+        public Response<Artist> GetArtists(int id)
         {
             return _artistCategory.GetPersonPerCat(id);
         }
@@ -31,7 +31,7 @@ namespace WMTT.Service.Controllers
         // GET: 
         [Route("api/ArtistCategory/getCategories/{id}")]
         [HttpGet]
-        public Response<Artists_Categories> Get(int id)
+        public Response<Category> GetCategories(int id)
         {
             return _artistCategory.GetCatPerPerson(id);
         }

@@ -10,7 +10,7 @@ namespace WMTT.Biz.Interfaces
 {
     public interface IArtistCategoryBiz
     {
-        Response<Artists_Categories> GetCatPerPerson(int idPerson);
-        Response<Artists_Categories> GetPersonPerCat(int idCategory);
+        Response<Category> GetCatPerPerson(int idPerson);
+        Response<Artist> GetPersonPerCat(int idCategory);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,37 +87,80 @@ namespace WMTT.Data.Implementations.Classes
             }
         }
 
-        public Response<Artists_Categories> GetCatPerPerson(int idPerson)
+        public Response<Category> GetCatPerPerson(int idArtist)
         {
             try
             {
-                IEnumerable<Artists_Categories> allCategories;
+                IEnumerable<Category> allCategories;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    allCategories = db.Artists_Categories.Where(x => x.IdArtist == idPerson).ToList();
+
+                    //allCategories = (from category in db.Categories
+                    //                 join artist_category in db.Artists_Categories on category.IdCategory equals artist_category.IdCategory
+                    //                 where artist_category.IdArtist == idPerson
+                    //                 select new Category
+                    //                 {
+                    //                     IdCategory = category.IdCategory,
+                    //                     CategoryName = category.CategoryName,
+                    //                     Details = category.Details
+                    //                 }).ToList()
+                    //                .Select(x => new Category
+                    //                {
+                    //                    IdCategory = x.IdCategory,
+                    //                    CategoryName = x.CategoryName,
+                    //                    Details = x.Details,
+                    //                });
+
+                    allCategories = db.Artists_Categories.Where(ip => ip.IdArtist == idArtist).Include(a => a.Category).Select(x => x.Category)/*.Distinct()*/.ToList();
+
                 }
-                return new Response<Artists_Categories>(null, null, true, null, allCategories);
-            }
+                return new Response<Category>(null, null, true, null, allCategories);
+                }
             catch (Exception err)
             {
-                return new Response<Artists_Categories>(err, null, false, null);
+                return new Response<Category>(err, null, false, null);
             }
         }
 
-        public Response<Artists_Categories> GetPersonPerCat(int idCategory)
+        public Response<Artist> GetPersonPerCat(int idCategory)
         {
             try
             {
-                IEnumerable<Artists_Categories> allPeople;
+                IEnumerable<Artist> allPeople;
                 using (TTDBEntities db = new TTDBEntities())
                 {
-                    allPeople = db.Artists_Categories.Where(x => x.IdCategory == idCategory).ToList();
+                    //allPeople = (from artist in db.Artists
+                    //             join artist_category in db.Artists_Categories on artist.IdArtist equals artist_category.IdArtist
+                    //             where artist_category.IdCategory == idCategory
+                    //             select new
+                    //             {
+                    //                 IdArtist = artist.IdArtist,
+                    //                 BirthDate = artist.BirthDate,
+                    //                 FullName = artist.FullName,
+                    //                 Address = artist.Address,
+                    //                 Email = artist.Email,
+                    //                 PhoneNumber = artist.PhoneNumber,
+                    //                 StartDate = artist.StartDate
+                    //             }).ToList()
+                    //            .Select(x => new Artist
+                    //            {
+                    //                IdArtist = x.IdArtist,
+                    //                BirthDate = x.BirthDate,
+                    //                FullName = x.FullName,
+                    //                Address = x.Address,
+                    //                Email = x.Email,
+                    //                PhoneNumber = x.PhoneNumber,
+                    //                StartDate = x.StartDate
+                    //            });
+
+                    allPeople = db.Artists_Categories.Where(ac => ac.IdCategory == idCategory).Include(a => a.Artist).Select(x => x.Artist)/*.Distinct()*/.ToList();
+                    
                 }
-                return new Response<Artists_Categories>(null, null, true, null, allPeople);
+                return new Response<Artist>(null, null, true, null, allPeople);
             }
             catch (Exception err)
             {
-                return new Response<Artists_Categories>(err, null, false, null);
+                return new Response<Artist>(err, null, false, null);
             }
         }
     }

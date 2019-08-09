@@ -9,7 +9,7 @@ namespace WMTT.Data.Interfaces
 {
     public interface IArtistCategoryData : IGenericData<Artists_Categories>
     {
-        Response<Artists_Categories> GetCatPerPerson(int idPerson);
-        Response<Artists_Categories> GetPersonPerCat(int idCategory);
+        Response<Category> GetCatPerPerson(int idArtist);
+        Response<Artist> GetPersonPerCat(int idCategory);
     }
 }
